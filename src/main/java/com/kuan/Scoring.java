@@ -5,7 +5,7 @@ public class Scoring {
         Student tony = new Student("Tony",80,90);
         Student jack = new Student("Jack",10,40);
         GraduateStudent jane =
-                new GraduateStudent("Jane",90,75);
+                new GraduateStudent("Jane",90,75,90);
         //tony.name = "Tony";
         //tony.english = 10;
         //tony.math = 90;
