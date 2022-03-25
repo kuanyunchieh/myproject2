@@ -1,7 +1,10 @@
 package com.kuan.ticket;
 
 import java.util.Scanner;
-
+//台北到台中600
+//台北到高雄1500
+//高雄到台中900
+//學生證8折/敬老票5折/來回票9折
 public class Sale {
     public static void main(String[] args) {
         Ticket ticket = new Ticket(Station.TAIPEI_CITY,Station.TAICHUNG);
