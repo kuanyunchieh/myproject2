@@ -1,4 +1,4 @@
-package com.kuan;
+package com.kuan.sales;
 
 public class Customer {
     String id;
@@ -17,6 +17,7 @@ public class Customer {
         int discount = (amount/1000)*100;
          return  amount-discount;
     }
+
     public void print(){
         System.out.println(id + "\t" + amount + "\t" + getOffMoney());
     }

@@ -1,6 +1,8 @@
-package com.kuan;
+package com.kuan.score;
 
-public class GraduateStudent extends Student{
+import com.kuan.score.Student;
+
+public class GraduateStudent extends Student {
     int thesis;
     public GraduateStudent(String name){
         //this.name=name;

@@ -1,6 +1,7 @@
-package com.kuan;
+package com.kuan.sales;
 
-public class SilverCustomer extends Customer{
+
+public class SilverCustomer extends Customer {
 
     public SilverCustomer(String id,int amount){
         super(id, amount);

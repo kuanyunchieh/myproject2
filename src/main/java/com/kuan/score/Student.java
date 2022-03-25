@@ -1,4 +1,4 @@
-package com.kuan;
+package com.kuan.score;
 
 public class Student {
     String name;

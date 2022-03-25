@@ -1,4 +1,4 @@
-package com.kuan;
+package com.kuan.sales;
 
 public class Sales {
     public static void main(String[] args) {

@@ -1,4 +1,7 @@
-package com.kuan;
+package com.kuan.score;
+
+import com.kuan.score.GraduateStudent;
+import com.kuan.score.Student;
 
 public class Scoring {
     public static void main(String[] args) {
