@@ -10,7 +10,7 @@ public class Sale {
         Ticket ticket = new Ticket(Station.TAIPEI_CITY,Station.TAICHUNG);
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Your start station? (Taipei: 1, Taichung: 2, Kaohsiung: 3");
+        System.out.println("Your start station? (Taipei: 1, Taichung: 2, Kaohsiung: 3)");
         int choice = Integer.parseInt(scanner.next());
         Station startstation = null;
         switch (choice){
@@ -26,16 +26,16 @@ public class Sale {
         }
         System.out.println("Your destination station? (Taipei: 1, Taichung: 2, Kaohsiung: 3)");
         choice = Integer.parseInt(scanner.next());
-        Station endststion = null;
+        Station endstation = null;
         switch (choice){
             case 1:
-                endststion = Station.TAIPEI_CITY;
+                endstation = Station.TAIPEI_CITY;
                 break;
             case 2:
-                endststion = Station.TAICHUNG;
+                endstation = Station.TAICHUNG;
                 break;
             case 3:
-                endststion = Station.KAOHSIUNG;
+                endstation = Station.KAOHSIUNG;
                 break;
         }
 
