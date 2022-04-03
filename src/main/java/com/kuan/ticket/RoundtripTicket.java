@@ -3,8 +3,8 @@ package com.kuan.ticket;
 import java.util.Scanner;
 
 public class RoundtripTicket extends Ticket{
-    public RoundtripTicket(Station start,Station destination) {
-        super(start, destination);
+    public RoundtripTicket(Station start,Station destination,int num,Types type) {
+        super(start, destination,num,type);
         price = (int)((price*2)*0.9);
     }
     public void print(){

@@ -9,35 +9,50 @@ public class Ticket {
 
     Station start;
     Station destination;
+    Types type;
+
     int price;
     int num;
-    public Ticket(Station start,Station destination){
+
+
+    public Ticket(Station start,Station destination,int num,Types type){
         this.start = start;
         this.destination = destination;
+        this.num = num;
+        this.type=type;
 
 
-        if((start==Station.TAIPEI_CITY && destination==Station.TAICHUNG)
-                || (start==Station.TAICHUNG && destination==Station.TAIPEI_CITY)){
-            price=600;
-
-
-        }else if((start==Station.TAICHUNG && destination==Station.KAOHSIUNG)
-                || (start==Station.KAOHSIUNG && destination==Station.TAICHUNG)){
-            price=900;
-
-        }else
-        {
-            price=1500;
+        if(start==Station.TAIPEI_CITY){
+            if(destination==Station.TAICHUNG){
+                price=600;
+            }else if(destination == Station.KAOHSIUNG){
+                price=1500;
+            }else {
+                System.out.println("Wrong");
+            }
+        }else if(start ==Station.TAICHUNG){
+            if(destination==Station.TAIPEI_CITY){
+                price=600;
+            }else if(destination==Station.KAOHSIUNG){
+                price=900;
+            }else {
+                System.out.println("Wrong");
+            }
+        }else if(start==Station.KAOHSIUNG){
+            if(destination==Station.TAIPEI_CITY){
+                price=1500;
+            }else if(destination==Station.TAICHUNG){
+                price=900;
+            }else {
+                System.out.println("Wrong");
+            }
         }
 
     }
     public void print() {
-        Scanner scanner = new Scanner(System.in);
-        String s = scanner.next();
-        int num = Integer.parseInt(s);
         price = price*num;
-        System.out.println("startstation: "+ start.name + "\t" +"endstation: "+destination.name
-                + "\t" +"pieces: "+ num +"\t" +"totalprice: "+price );
+        System.out.println("Startstation: "+ start.name + "\t" +"Endstation: "+destination.name
+                + "\t" +"Type: "+type.types+ "\t" +"Pieces: "+ num +"\t" +"price: "+price );
     }
 
 }
