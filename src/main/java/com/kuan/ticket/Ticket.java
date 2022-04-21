@@ -21,7 +21,6 @@ public class Ticket {
         this.num = num;
         this.type=type;
 
-
         if(start==Station.TAIPEI_CITY){
             if(destination==Station.TAICHUNG){
                 price=600;

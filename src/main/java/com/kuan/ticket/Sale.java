@@ -13,8 +13,10 @@ public class Sale {
     public static void main(String[] args) {
         //Ticket ticket = new Ticket(Station.TAIPEI_CITY,Station.TAICHUNG);
         List <Ticket> tickets = new ArrayList<Ticket>();
+        List <Total>totals = new ArrayList();
         Scanner scanner = new Scanner(System.in);
         boolean end = false;
+
         while (!end) {
             System.out.println("Your start station? (Taipei: 1, Taichung: 2, Kaohsiung: 3)");
             int choice = Integer.parseInt(scanner.next());
@@ -49,6 +51,7 @@ public class Sale {
 
             System.out.println("Your Ticket type ? (Normal: 1, Student: 2, Older: 3 ,Round-trip: 4)");
             choice = Integer.parseInt(scanner.next());
+            int sum = 0;
             Ticket price = null;
             Types type = null;
             switch (choice) {
@@ -56,22 +59,27 @@ public class Sale {
                     type=Types.Normal;
                     price = new Ticket(startstation, endstation,pieces,type);
                     tickets.add(new Ticket(startstation,endstation,pieces,type));
+
                     break;
                 case 2:
                     type=Types.Student;
                     price = new StudentTicket(startstation,endstation,pieces,type);
                     tickets.add(new StudentTicket(startstation,endstation,pieces,type));
+
                     break;
                 case 3:
                     type=Types.Older;
                     price = new OlderTicket(startstation,endstation,pieces,type);
                     tickets.add(new OlderTicket(startstation,endstation,pieces,type));
+
                     break;
                 case 4:
                     type=Types.RoundTrip;
                     price = new RoundtripTicket(startstation,endstation,pieces,type);
                     tickets.add(new RoundtripTicket(startstation,endstation,pieces,type));
+
                     break;
+
             }
             System.out.println("Want to buy another tickets?(Yes: 1, No: 2 ,Cancle order: 3)");
             choice = Integer.parseInt(scanner.next());
@@ -82,6 +90,7 @@ public class Sale {
                     for(Ticket t: tickets){
                         t.print();
                     }
+
                     end = true;
                     break;
                 case 3:

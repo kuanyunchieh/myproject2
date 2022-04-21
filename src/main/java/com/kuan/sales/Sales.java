@@ -25,6 +25,7 @@ public class Sales {
         for(Customer c : customers){
             c.print();
         }
-
+        Customer c = customers.get(1);
+        System.out.println(c instanceof GoldenCustomer);
     }
 }
