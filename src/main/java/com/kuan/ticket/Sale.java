@@ -46,6 +46,9 @@ public class Sale {
                     endstation = Station.KAOHSIUNG;
                     break;
             }
+
+
+
             System.out.println("How many pieces you want?");
             int pieces = Integer.parseInt(scanner.next());
 

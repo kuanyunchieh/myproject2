@@ -2,7 +2,7 @@ package com.kuan.score;
 
 import com.kuan.score.Student;
 
-public class GraduateStudent extends Student {
+public class GraduateStudent extends Student{
     int thesis;
     public GraduateStudent(String name){
         //this.name=name;
