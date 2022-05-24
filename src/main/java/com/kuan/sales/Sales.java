@@ -27,5 +27,9 @@ public class Sales {
         }
         Customer c = customers.get(1);
         System.out.println(c instanceof GoldenCustomer);
+        //
+        MyClass a = new MyClass();
+        a.max(4,8);
+        a.min(1,2);
     }
 }
