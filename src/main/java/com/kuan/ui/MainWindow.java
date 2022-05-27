@@ -14,6 +14,7 @@ public class MainWindow {
         frame.setSize(400,300);
         frame.setLocation(200,200);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        //add Component
         JButton button = new JButton("OK");
         //匿名類別 Anonymous class
         button.addActionListener(new ActionListener() {
